@@ -26,93 +26,88 @@
 </div>
 -->
 <div *ngIf="groupId2">
-        
-            <div class="Addcontainer">
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#addProductDiv">Lisää tuote</button>
-                <div id="addProductDiv" class="collapse out">
-        
-                    <form (ngSubmit)="onSubmit()" #addForm="ngForm" class="form-horizontal">
-                        <div class="form-group">
-                            <label class="container" for="name">Tuotteen nimi :</label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="Nmae" required 
-                                [(ngModel)]="addProduct.Nmae" name="Nmae" #Nmae="ngModel">
-                                <div *ngIf="Nmae.errors && (Nmae.dirty || Nmae.touched)" class="alert alert-danger">
-                                    <div [hidden]="!Nmae.errors.required">
-                                        Tuotteen nimi on pakollinen!
-                                    </div>
+    
+    
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#addProductDiv">Lisää tuote</button>
+        <div class="container">
+            <div id="addProductDiv" class="collapse out">
+    
+                <form (ngSubmit)="onSubmit()" #addForm="ngForm" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="container" for="name">Tuotteen nimi :</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="Nmae" required [(ngModel)]="addProduct.Nmae" name="Nmae" #Nmae="ngModel">
+                            <div *ngIf="Nmae.errors && (Nmae.dirty || Nmae.touched)" class="alert alert-danger">
+                                <div [hidden]="!Nmae.errors.required">
+                                    Tuotteen nimi on pakollinen!
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="container" for="name">Kuvaus : </label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="Description" required 
-                                [(ngModel)]="addProduct.Description" name="Description" #Description="ngModel">
-                                <div *ngIf="Description.errors && (Description.dirty || Description.touched)" class="alert alert-danger">
-                                    <div [hidden]="!Description.errors.required">
-                                        Kuvaus on pakollinen!
-                                    </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="container" for="name">Kuvaus : </label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="Description" required [(ngModel)]="addProduct.Description" name="Description"
+                                #Description="ngModel">
+                            <div *ngIf="Description.errors && (Description.dirty || Description.touched)" class="alert alert-danger">
+                                <div [hidden]="!Description.errors.required">
+                                    Kuvaus on pakollinen!
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="container" for="name">Varastosaldo : </label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="Quantity" required 
-                                [(ngModel)]="addProduct.Quantity" name="Quantity" #Quantity="ngModel">
-                                <div *ngIf="Quantity.errors && (Quantity.dirty || Quantity.touched)" class="alert alert-danger">
-                                    <div [hidden]="!Quantity.errors.required">
-                                        Varastosaldo on pakollinen!
-                                    </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="container" for="name">Varastosaldo : </label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="Quantity" required [(ngModel)]="addProduct.Quantity" name="Quantity" #Quantity="ngModel">
+                            <div *ngIf="Quantity.errors && (Quantity.dirty || Quantity.touched)" class="alert alert-danger">
+                                <div [hidden]="!Quantity.errors.required">
+                                    Varastosaldo on pakollinen!
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="container" for="name">Pakkauksen tiedot : </label>
-                            <div class="col-sm-5">
-                                <input align=right type="text" class="form-control" id="UnitOfMeasure" required 
-                                [(ngModel)]="addProduct.UnitOfMeasure" name="UnitOfMeasure" #UnitOfMeasure="ngModel">
-                                <div *ngIf="UnitOfMeasure.errors && (UnitOfMeasure.dirty || UnitOfMeasure.touched)" class="alert alert-danger">
-                                    <div [hidden]="!UnitOfMeasure.errors.required">
-                                        Pakkauksen tiedot on pakollinen!
-                                    </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="container" for="name">Pakkauksen tiedot : </label>
+                        <div class="col-sm-5">
+                            <input align=right type="text" class="form-control" id="UnitOfMeasure" required [(ngModel)]="addProduct.UnitOfMeasure" name="UnitOfMeasure"
+                                #UnitOfMeasure="ngModel">
+                            <div *ngIf="UnitOfMeasure.errors && (UnitOfMeasure.dirty || UnitOfMeasure.touched)" class="alert alert-danger">
+                                <div [hidden]="!UnitOfMeasure.errors.required">
+                                    Pakkauksen tiedot on pakollinen!
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="container" for="name">Erän saapumispäivä :</label>
-                            <div class="col-sm-5">
-                                <input type="date" class="form-control" id="Entery_Date" 
-                                [(ngModel)]="addProduct.Entery_Date" name="Entery_Date" #Entery_Date="ngModel">
-                                <div *ngIf="Entery_Date.errors && (Entery_Date.dirty || Entery_Date.touched)" class="alert alert-danger">
-                                    <div [hidden]="!Entery_Date.errors.required">
-                                        Erän saapumispäivä on pakollinen!
-                                    </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="container" for="name">Erän saapumispäivä :</label>
+                        <div class="col-sm-5">
+                            <input type="date" class="form-control" id="Entery_Date" required [(ngModel)]="addProduct.Entery_Date" name="Entery_Date"
+                                #Entery_Date="ngModel">
+                            <div *ngIf="Entery_Date.errors && (Entery_Date.dirty || Entery_Date.touched)" class="alert alert-danger">
+                                <div [hidden]="!Entery_Date.errors.required">
+                                    Erän saapumispäivä on pakollinen!
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="container" for="name">Tuotteen vanhenemispäivä :</label>
-                            <div class="col-sm-5">    
-                            <input  type="date" class="form-control" id="Expire" 
-                                [(ngModel)]="addProduct.Expire" name="Expire" #Expire="ngModel">
-                                <div *ngIf="Expire.errors && (Expire.dirty || Expire.touched)" class="alert alert-danger">
-                                    <div [hidden]="!Expire.errors.required">
-                                        Tuotteen vanhenemispäivä on pakollinen!
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="container" for="name">Tuotteen vanhenemispäivä :</label>
+                        <div class="col-sm-5">
+                            <input type="date" class="form-control" id="Expire" [(ngModel)]="addProduct.Expire" name="Expire" #Expire="ngModel">
                         </div>
-        
-        
-                        <div class="form-group">
-                            <div class="col-sm-2">
-                                <button type="submit" class="btn btn-success btn-block" [disabled]="!addForm.form.valid" (click)="submitProduct()">Lähetä tiedot </button>
-                            </div>
-                        </div>
-                    </form>
-        
-                </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success " [disabled]="!addForm.form.valid" (click)="submitProduct()">Lähetä tiedot </button>
+                    </div>
+    
+                </form>
+    
             </div>
         </div>
+    </div>

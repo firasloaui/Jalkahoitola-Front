@@ -2,245 +2,236 @@
 
 
 .body {
-    
-    background-color: #FFFFFF;
-  }
-
-  table, th , td  {
-    border: 1px solid grey;
-    border-collapse: collapse;
-    padding: 5px;
-  }
-
   
-  
-  .modal-body {
-    position: relative;
-    overflow-y: auto;
-    max-height: 400px;
-    padding: 15px;
+  background-color: #FFFFFF;
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+
+
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
 }
 
 .product li {
+cursor: pointer;
+position: left;
+font-size: large;
+left: 0;
+background-color: #EEE;
+color: black;
+margin: .5em;
+padding: .3em 0;
+height: 1.6em;
+border-radius: 4px;
+width: 25em;
+}
+
+
+
+
+
+
+.productgroups {
+    height: 200px;
+    background-color: #cccccc;
+    background-image: linear-gradient(#69B5F8, #DAEFF7);
+    float: left;
+    width: 75%;
+    padding: 15px;
+    border: 1px solid black;
+  }
+
+  .container{
+    background-image: linear-gradient( #082B49,#69B5F8, #DAEFF7, #69B5F8);    
+  }
+  
+   .container { 
+    
+      float: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 0px solid #FFFFFF;
+     
+  }
+  .form-horizontal{
+    color: #78BCF8; 
+  }
+ 
+ 
+
+ /**/
+ 
+
+ .btn{
+size: large;
+color: #fff;
+background-color: #0bacd3;
+border:2px solid black;
+border-radius: 12px;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+
+
+
+  /*  border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    */
+ 
+ 
+
+   
+
+  
+  .jumbotron {
+      height: 70%;    
+      background-image: linear-gradient(#69B5F8, #DAEFF7);
+      max-width: 100%; float: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+       border: 1px solid black;
+      
+  }
+  
+    .jumbotron h1 {
+      display: block;
+      font-weight: bold;
+      font-size: 40px;
+      color: black;
+     /* padding-left: 40px;*/
+      text-align: center;
+    }
+    .jumbotron p {
+      display: block;
+      color: black;
+      font-size: 30px;
+     /* padding-left: 40px;*/
+      text-align: center;
+    }
+  
+  
+  
+  .h2{
+    /*Vaihdettu sivulta app.component.html  H2 = <h2 class="h2">Tuoteryhmät:</h2>*/
+    font-size: 35px;
+  }
+  
+  
+
+.table tr:nth-child(odd) td{
+    background:#A8CFF1;
+}
+.table tr:nth-child(even) td{
+     background:rgba(218, 239, 247, 0.72);
+}
+
+.productgroups {
+  color: #000000;
+  
+}
+
+
+/*addrpoduct.component.html <div class="container" > muutettu <div class="Addcontainer"  */
+.Addcontainer {
+  width: 80%;
+  border: 1px solid black;
+  float: right; 
+  background-color: #FFFFFF;
+}
+.Addcontainer .container {
+    width: 90%;
+    font-size: 20px;
+    color: black;
+    background-color: #FFFFFF;
+}
+#addProductDiv {
+  background-color: #FFFFFF;
+}
+
+.addproduct .text {
+  position: relative;
+  top: -3px;
+  background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Porductlist TEST, productcomponen.css, commented off there
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.productgroups {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.productgroups li {
   cursor: pointer;
-  position: left;
-  font-size: large;
+  position: relative;
   left: 0;
   background-color: #EEE;
-  color: black;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
-  width: 25em;
 }
-
-
-
-
+.productgroups li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.productgroups li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.productgroups .text {
+  position: relative;
+  top: -3px;
   
-  
-  .productgroups {
-      height: 200px;
-      background-color: #cccccc;
-      background-image: linear-gradient(#69B5F8, #DAEFF7);
-      float: left;
-      width: 75%;
-      padding: 15px;
-      border: 1px solid black;
-    }
-  
-    .container{
-      background-image: linear-gradient(#69B5F8, #DAEFF7);
-      
-    }
-    
-     .container { 
-      
-        float: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        border: 0px solid #FFFFFF;
-       
-    }
-    .form-horizontal{
-      color: white; 
-    }
-   
-   
-  
-   /**/
-   
-  
-   .btn{
-  size: large;
-  color: #fff;
-  background-color: #0bacd3;
-  border-bottom:2px solid #098aa9;
-  
-  color: #fff;
-  background-color: #29b6d8;
-  border-bottom:2px solid #2192ad;
-  outline: none;
-   
-  color: #fff;
-  background-color: #0a97b9;
-  border-top:2px solid #087994;
-  outline-offset: none;
-  margin-top: 2px;
-  }
-  
-  
-  
-  
-    /*  border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      */
-   
-   
-  
-     
-  
-    
-    .jumbotron {
-        height: 70%;    
-        background-image: linear-gradient(#69B5F8, #DAEFF7);
-        max-width: 100%; float: center;
-       padding-top: 5px;
-       padding-bottom: 5px;
-         border: 1px solid black;
-        
-    }
-    
-      .jumbotron h1 {
-        display: block;
-        font-weight: bold;
-        font-size: 40px;
-        color: black;
-       /* padding-left: 40px;*/
-        text-align: center;
-      }
-      .jumbotron p {
-        display: block;
-        color: black;
-        font-size: 30px;
-       /* padding-left: 40px;*/
-        text-align: center;
-      }
-    
-    
-    
-    .h2{
-      /*Vaihdettu sivulta app.component.html  H2 = <h2 class="h2">Tuoteryhmät:</h2>*/
-      font-size: 35px;
-    }
-    
-    
-  
-  .table tr:nth-child(odd) td{
-      background:#A8CFF1;
-  }
-  .table tr:nth-child(even) td{
-       background:rgba(218, 239, 247, 0.72);
-  }
-  
-  .productgroups {
-    color: #000000;
-    
-  }
-  
-  
-  /*addrpoduct.component.html <div class="container" > muutettu <div class="Addcontainer"  */
-  .Addcontainer {
-    width: 80%;
-    border: 1px solid black;
-    float: right; 
-    background-color: #FFFFFF;
-  }
-  .Addcontainer .container {
-      width: 90%;
-      font-size: 20px;
-      color: black;
-      background-color: #FFFFFF;
-  }
-  #addProductDiv {
-    background-color: #FFFFFF;
-  }
-
-  .addproduct .text {
-    position: relative;
-    top: -3px;
-    background-color: #FFFFFF;
-  }
-  
-
-
-  
-
-
-
-
-
-
-
-
-  /* Porductlist TEST, productcomponen.css, commented off there
-  
-  .selected {
-    background-color: #CFD8DC !important;
-    color: white;
-  }
-  .productgroups {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
-  .productgroups li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-  }
-  .productgroups li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
-  }
-  .productgroups li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-  }
-  .productgroups .text {
-    position: relative;
-    top: -3px;
-    
-  }
-   .productgroups .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-  */
+}
+ .productgroups .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+*/
 

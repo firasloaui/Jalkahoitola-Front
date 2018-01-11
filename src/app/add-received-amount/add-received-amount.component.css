@@ -1,0 +1,27 @@
+label.container { 
+    color: #151516 ;
+    margin-left:15px;
+    margin-top:5px;
+    white-space: nowrap;
+    float: left; width: 5em; 
+}
+  
+input.form-control {
+    width: 250px;
+    margin-top:8px; 
+    margin-left:70px; 
+    
+}
+.form-group{ 
+    width: 250px;
+}
+  
+.form-horizontal { 
+  margin-top:15px;    
+  background-color: #78BCF8 ;
+  border: 5px solid #0E0D0D;
+}
+
+.btn{
+    margin-left:15px; 
+}

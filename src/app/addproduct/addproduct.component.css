@@ -1,48 +1,21 @@
-.selected {
-    background-color: #CFD8DC !important;
-    color: white;
-  }
-  .addproduct {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
-  .addproduct li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-  }
-  .addproduct li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
-  }
-  .addproduct li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-  }
-  .addproduct .text {
-    position: relative;
-    top: -3px;
-  }
-  .addproduct .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-  
+
+.btn
+{
+margin-left:-200px;
+margin-top:500px;
+}
+
+label.container { 
+  color: #151516 ;
+ }
+
+input.form-control {
+  width: 250px;
+}
+.form-group{ 
+  width: 250px;
+}
+
+.form-horizontal{ 
+background-color: #78BCF8 ;
+}
