@@ -11,16 +11,16 @@
   <li *ngFor="let productGroup of productGroups"
     [class.selected] ="productGroup.GroupId === selectedProductGroup"
     (click)="onSelect(productGroup.GroupId)">
-    <span class="badge">{{productGroup.GroupId}}</span>{{productGroup.Name}}
+    {{productGroup.Name}}
   </li>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#addGrouptDiv">luo uusi ryhmä</button>
 </ul>
 
 <div id="addGrouptDiv" class="collapse out">
   <form #addForm="ngForm" class="form-horizontal">
-    <div class="form-group">
+    <div >
       <label class="container" for="name">Ryhmä nimi :</label>
-      <div class="col-sm-5">
+      <div class="col-sm-2">
         <input type="text" class="form-control" id="name" required
         [(ngModel)]="addGroup.name" name="name" #name="ngModel">
       </div>
