@@ -1,18 +1,26 @@
 
-<table>
+<table class="table">
     <tr>
         <th>Hinta</th>
         <th>Päivämäärä</th>
         <th>Vanhenemispäivä</th>
-        <th>Tuotteen valmistaja</th>
+        <th class="th1">Tuotteen valmistaja</th>
         <th>Saapumiserän id</th>
         <th>Määrä</th>
         <th>ota</th>
     </tr>
     <tr *ngFor="let shipment of shipments">
         <td>{{shipment.Price}}</td>
-        <td>{{shipment.Date}}</td>
-        <td>{{shipment.ExpireDate}}</td>
+        <td>{{shipment.Date | date: 'dd/MM/yyyy'}}</td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <td>{{shipment.ExpireDate | date: 'dd/MM/yyyy'}}</td>
+=======
+        <td>{{shipment.ExpireDate | date: 'dd/MM/yyyy'}}</td> 
+>>>>>>> 91b226bdffaed7bcc0989374e98a6dc04252d6b6
+=======
+        <td>{{shipment.ExpireDate | date: 'dd/MM/yyyy'}}</td> 
+>>>>>>> 91b226bdffaed7bcc0989374e98a6dc04252d6b6
         <td>{{shipment.VendorName}}</td>
         <td>{{shipment.SaapumiseranId}}</td>
         <td>{{shipment.UnitStock}}</td>

@@ -20,7 +20,13 @@ export class ProductComponent implements OnChanges{
     oneProduct: Product[];
     productId2: string;
     productId3: string;
-    //test
+    
+    productRemoveUrl: string='http://pointfootapi.azurewebsites.net/api/removeproduct/';
+    removeProduct(){
+        this.httpClient.get(this.productRemoveUrl+this.productId).subscribe();
+        console.log("Poistetaan:"+ this.productId);
+        this.getProduct(this.productId);
+    }
 
     getProduct(id: any){
         console.log("getProduct id:"+id);
