@@ -30,8 +30,8 @@
             <td>{{product.Description}}</td>
             <td>{{product.Quantity}}</td>
             <td>{{product.UnitOfMeasure}}</td>
-            <td><app-received-amount [productId2]="product.ProductId"></app-received-amount></td>
-            
+            <!--<td><app-received-amount [productId2]="product.ProductId"></app-received-amount></td>-->
+            <td><app-product-count [productId4]="product.ProductId"></app-product-count></td>
             </tr>
         </tbody>
       </table>

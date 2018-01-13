@@ -11,8 +11,8 @@
     </tr>
     <tr *ngFor="let shipment of shipments">
         <td>{{shipment.Price}}</td>
-        <td>{{shipment.Date}}</td>
-        <td>{{shipment.ExpireDate}}</td>
+        <td>{{shipment.Date | date: 'dd/MM/yyyy'}}</td>
+        <td>{{shipment.ExpireDate | date: 'dd/MM/yyyy'}}</td> 
         <td>{{shipment.VendorName}}</td>
         <td>{{shipment.SaapumiseranId}}</td>
         <td>{{shipment.UnitStock}}</td>
