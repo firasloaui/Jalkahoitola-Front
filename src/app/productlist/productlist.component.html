@@ -32,6 +32,7 @@
             <td>{{product.UnitOfMeasure}}</td>
             <!--<td><app-received-amount [productId2]="product.ProductId"></app-received-amount></td>-->
             <td><app-product-count [productId4]="product.ProductId"></app-product-count></td>
+            <td> <button type="button" class="btn btn-default" (click)="removeProduct(product.ProductId)">Delete</button></td>
             </tr>
         </tbody>
       </table>
