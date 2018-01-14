@@ -18,8 +18,8 @@ input.form-control {
   
 .form-horizontal { 
   margin-top:15px;    
-  background-color: #78BCF8 ;
-  border: 5px solid #0E0D0D;
+  background-color: rgb(150, 204, 252) ;
+  border: 1px solid #0E0D0D;
 }
 
 .btn{
