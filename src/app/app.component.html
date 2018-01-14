@@ -1,5 +1,5 @@
-
-<h2 class="h2">Tuoteryhmät:</h2>
+<h2 class="h2">
+  Tuoteryhmät:</h2>
 <!--
 <input type="text" (keyup)="onProductGroupKeyUp($event)">
 <p>
@@ -7,26 +7,24 @@
 </p>
 -->
 
-<ul class="productgroups">
-  <li *ngFor="let productGroup of productGroups"
-    [class.selected] ="productGroup.GroupId === selectedProductGroup"
-    (click)="onSelect(productGroup.GroupId)">
-    {{productGroup.Name}}
-  </li>
+<table class="productgroups">
+  <tr *ngFor="let productGroup of productGroups" [class.selected]="productGroup.GroupId === selectedProductGroup" (click)="onSelect(productGroup.GroupId)">
+    <td>{{productGroup.Name}}</td>
+    <td> <button type="button" class="btn btn-default" (click)="removeProductGroup(productGroup.GroupId)">Delete</button></td>
+  </tr>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#addGrouptDiv">luo uusi ryhmä</button>
-</ul>
+</table>
 
 <div id="addGrouptDiv" class="collapse out">
   <form #addForm="ngForm" class="form-horizontal">
-    <div >
+    <div>
       <label class="container" for="name">Ryhmä nimi :</label>
       <div class="col-sm-2">
-        <input type="text" class="form-control" id="name" required
-        [(ngModel)]="addGroup.name" name="name" #name="ngModel">
+        <input type="text" class="form-control" id="name" required [(ngModel)]="addGroup.name" name="name" #name="ngModel">
       </div>
     </div>
 
-    
+
     <div class="form-group">
       <div class="col-sm-2">
         <button type="submit" class="btn btn-success" [disabled]="!addForm.form.valid" (click)="submitGroupProduct()">Lähetä tiedot </button>
@@ -37,5 +35,3 @@
 
 <app-addproduct [groupId2]="selectedProductGroup"></app-addproduct>
 <app-productlist [groupId]="selectedProductGroup">Loading groups...</app-productlist>
-
-

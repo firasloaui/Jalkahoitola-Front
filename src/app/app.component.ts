@@ -24,6 +24,12 @@ export class AppComponent implements OnInit{
   selectedProductGroup: Number;
   addGroup = new ProductGroup;
   //onProductGroupKeyUp(event: any){ this.productGroupId=event.target.value;  }
+
+  productGroupRemoveUrl: string='http://pointfootapi.azurewebsites.net/api/removeproductgroup/';
+  removeProductGroup(id: any){
+      this.httpClient.get(this.productGroupRemoveUrl+id).subscribe();
+    }
+
   getProductGroup(id: any){
     console.log(this.productGroupId);
     this.httpClient.get(this.productGroupUrl+id)
