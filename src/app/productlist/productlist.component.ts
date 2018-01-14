@@ -24,8 +24,9 @@ export class ProductListComponent implements OnChanges{
       this.httpClient.get(this.productRemoveUrl+id).subscribe();
       //console.log("Poistetaan:"+ this.productId);
       //this.getProduct(this.productId);
+    
       if(this.groupId != undefined){
-        this.getProductsInGroup(this.groupId);
+        setTimeout(() => this.getProductsInGroup(this.groupId),1000);
      }
     }
 

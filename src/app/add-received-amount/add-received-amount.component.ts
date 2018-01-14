@@ -15,20 +15,15 @@ import { OnChanges } from '@angular/core';
 })
 export class AddReceivedAmountComponent implements OnInit {
   @Input()  productId3: number;
-  
-
   constructor(private httpClient: HttpClient){}
   addShipmentUrl: string = 'http://pointfootapi.azurewebsites.net/api/shipmentsforproduct/'
   newShipment = new ReceivedAmount;
-
-
   
   submitReceivedAmount(){
-    console.log("add-received-amount:" + this.productId3)
+    //console.log("add-received-amount:" + this.productId3)
     this.newShipment.productId = this.productId3;
     this.httpClient.post(this.addShipmentUrl,this.newShipment)
     .subscribe();
-
   }
 
   ngOnInit() {

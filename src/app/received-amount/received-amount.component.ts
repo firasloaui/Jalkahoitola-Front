@@ -17,9 +17,8 @@ export
   shipment:  ReceivedAmount;
   constructor(private  httpClient: HttpClient) { }
   getShipmentUrl:  string = 'http://pointfootapi.azurewebsites.net/api/shipmentsforproduct/'
-  takeProductFromStockUrl:  string  = "http://pointfootapi.azurewebsites.net/api/reduceproduct?saapumiseranid="
   
-
+  takeProductFromStockUrl:  string  = "http://pointfootapi.azurewebsites.net/api/reduceproduct?saapumiseranid="
   takeProductFromStock(id:any) {
     //console.log("takeProductFromStock:" + id)
     this.httpClient.get(this.takeProductFromStockUrl + id)
@@ -43,7 +42,7 @@ export
   }
 
   ngOnChange() {
-    this.getShipment(this.productId2);
+    //this.getShipment(this.productId2);
   }
 
 }

@@ -13,7 +13,7 @@ import { OnChanges } from '@angular/core';
   
 })
 
-export class ProductComponent implements OnChanges{
+export class ProductComponent implements OnInit{
     @Input() productId: string;
     constructor(private httpClient: HttpClient){}
     productUrl: string='http://pointfootapi.azurewebsites.net/api/product/';
