@@ -22,39 +22,30 @@ export class ProductListComponent implements OnChanges{
   productRemoveUrl: string='http://pointfootapi.azurewebsites.net/api/removeproduct/';
   removeProduct(id: any){
       this.httpClient.get(this.productRemoveUrl+id).subscribe();
-      //console.log("Poistetaan:"+ this.productId);
-      //this.getProduct(this.productId);
-    
       if(this.groupId != undefined){
         setTimeout(() => this.getProductsInGroup(this.groupId),1000);
      }
     }
 
-  
-  
+   
   getProductsInGroup(id: any){
-    console.log("getProductsIngroup id:"+id);
     this.httpClient.get(this.getProductsInGroupUrl+id)
     .subscribe(
       (data: Product[])=> {
-        console.log(data);
         this.products=data;
       }
     )
   }
   onProductSelect(product: Product){
     this.selectedProduct=product;
-    console.log("onProductSelect");
   }
  ngOnChanges(): void{
-  //console.log("productlist.component.ts ngOnChanges groupid: " + this.groupId);
   if(this.groupId != undefined){
     this.getProductsInGroup(this.groupId);
    }
  }
  
   ngOnInit(): void {
-    //console.log("productlist.component.ts ngOnInit: " + this.groupId);
     if(this.groupId != undefined){
     this.getProductsInGroup(this.groupId);
     }

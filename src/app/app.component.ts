@@ -28,8 +28,8 @@ export class AppComponent implements OnInit{
   productGroupRemoveUrl: string='http://pointfootapi.azurewebsites.net/api/removeproductgroup/';
   removeProductGroup(id: any){
       this.httpClient.get(this.productGroupRemoveUrl+id).subscribe();
+      setTimeout(() => this.getProductGroup(0),1000);
     }
-
   getProductGroup(id: any){
     console.log(this.productGroupId);
     this.httpClient.get(this.productGroupUrl+id)
@@ -40,19 +40,15 @@ export class AppComponent implements OnInit{
       }
     )
   }
-
-  submitGroupProduct(){
+ submitGroupProduct(){
     this.addGroup.id = this.groupId;
-    console.log("submitGroupProduct "+this.addGroup.id);
-    this.httpClient.post(this.productGroupUrl,this.addGroup)
-    .subscribe();
+    this.httpClient.post(this.productGroupUrl,this.addGroup).subscribe();
+    setTimeout(() => this.getProductGroup(0),1000);
   }
   onSelect(productGroup: Number): void {
     this.selectedProductGroup=productGroup;
-    console.log("app.component.ts onSelect:" + this.selectedProductGroup);
-  }
+   }
   ngOnInit(): void {
     this.getProductGroup(0);
-         
    } 
 }

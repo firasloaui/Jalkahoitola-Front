@@ -3,6 +3,7 @@ import { Product } from '../classes';
 import { ProductGroup } from '../classes';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { OnChanges } from '@angular/core';
+import { ProductListComponent } from '../productlist/productlist.component';
 
 @Component({
   selector: 'app-addproduct',
@@ -28,6 +29,7 @@ export class AddProductComponent implements OnInit{
     //console.log("submitProduct "+this.addProduct.Nmae);
     this.httpClient.post(this.postAddProductUrl,this.addProduct)
     .subscribe();
+    ProductListComponent.call(this.getProductsInGroup(0));
    }
   getProductsInGroup(id: any){
     //console.log("getProductsIngroup id:"+id);
@@ -36,6 +38,7 @@ export class AddProductComponent implements OnInit{
       (data: Product[])=> {
         console.log(data);
         this.products=data;
+      
 
       }
     )

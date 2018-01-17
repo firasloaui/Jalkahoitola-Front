@@ -26,7 +26,6 @@ export
         this.shipments = data;
       });
   }
-
   getShipment(id:any) {
     //console.log("GETSHIPMENT:" + id)
     this.httpClient.get(this.getShipmentUrl + id)
