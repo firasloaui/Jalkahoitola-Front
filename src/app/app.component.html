@@ -33,5 +33,15 @@
   </form>
 </div>
 
-<app-addproduct [groupId2]="selectedProductGroup"></app-addproduct>
-<app-productlist [groupId]="selectedProductGroup">Loading groups...</app-productlist>
+
+
+
+<div class="row">
+  <div class="span9">
+    <app-productlist [groupId]="selectedProductGroup">Loading groups...</app-productlist>
+    <div class="row">
+      <div class="span6">
+        <app-addproduct [groupId2]="selectedProductGroup"></app-addproduct></div>
+    </div>
+  </div>
+</div>

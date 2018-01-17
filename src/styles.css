@@ -41,7 +41,7 @@ width: 25em;
 
 
 
-
+/*
 .productgroups {
     height: 200px;
     background-color: #cccccc;
@@ -51,7 +51,7 @@ width: 25em;
     padding: 15px;
     border: 1px solid black;
   }
-
+*/
  /* .container{
     background-image: linear-gradient( #082B49,#69B5F8, #DAEFF7, #69B5F8);    
   }
@@ -148,8 +148,8 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   
 }
 
-
-/*addrpoduct.component.html <div class="container" > muutettu <div class="Addcontainer" 
+/*
+addrpoduct.component.html <div class="container" > muutettu <div class="Addcontainer" 
 .Addcontainer {
   width: 80%;
   border: 1px solid black;

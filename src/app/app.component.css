@@ -1,9 +1,18 @@
 
-.productgroups {
+/*.productgroups {
   margin: auto;
   list-style-type: none;
   height: auto;
   width: 15em;
+}*/
+.productgroups {
+  height: auto;
+  background-color: #cccccc;
+  background-image: linear-gradient(#69B5F8, #DAEFF7);
+  float: left;
+  width: 15em;
+  padding: 15px;
+  border: 1px solid black;
 }
 .productgroups li {
   cursor: pointer;
@@ -15,14 +24,21 @@
   height: 1.6em;
   border-radius: 4px;
 }
-
+/*
 .productgroups li:hover {
   background-color: #40C50B;
   left: .1em;
 }
-
+*/
 .container {
   color: black;
   font-size: medium;
 }
-
+.productgroups thead tr:hover th, .productgroups tbody tr:hover td {
+  background-color: #40C50B;  
+}
+.span9 {
+  margin-left: 300px;
+  margin-right: autoo;
+  margin-top: -55px;
+}

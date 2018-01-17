@@ -7,13 +7,15 @@ margin-top:500px;
 
 label.container { 
   color: #151516 ;
+  width: auto;
  }
 
 input.form-control {
   width: 550px;
+  margin-left: 10px;
 }
 .form-group{ 
-  width: 250px;
+  width: 550px;
 }
 /*
 .form-horizontal{ 
