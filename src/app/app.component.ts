@@ -44,6 +44,7 @@ export class AppComponent implements OnInit{
     this.addGroup.id = this.groupId;
     this.httpClient.post(this.productGroupUrl,this.addGroup).subscribe();
     setTimeout(() => this.getProductGroup(0),1000);
+    alert("tuoteryhmä lisätty menestyksekkäästi");
   }
   onSelect(productGroup: Number): void {
     this.selectedProductGroup=productGroup;

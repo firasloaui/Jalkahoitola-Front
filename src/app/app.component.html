@@ -10,7 +10,7 @@
 <table class="productgroups">
   <tr *ngFor="let productGroup of productGroups" [class.selected]="productGroup.GroupId === selectedProductGroup" (click)="onSelect(productGroup.GroupId)">
     <td>{{productGroup.Name}}</td>
-    <td> <button type="button" class="btn btn-default" (click)="removeProductGroup(productGroup.GroupId)">Delete</button></td>
+    <td> <button type="button" class="btn btn-default" (click)="removeProductGroup(productGroup.GroupId)"><i class="fa fa-trash"></i></button></td>
   </tr>
   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addGrouptDiv">luo uusi ryhmä</button>
 </table>
@@ -33,7 +33,7 @@
 
     <div class="form-group">
       <div class="col-sm-2">
-        <button type="submit" class="btn btn-success" [disabled]="!addForm.form.valid" (click)="submitGroupProduct()">Lähetä tiedot </button>
+        <button type="reset" class="btn btn-success"  [disabled]="!addForm.form.valid" (click)="submitGroupProduct()">Lähetä tiedot </button>
       </div>
     </div>
   </form>
