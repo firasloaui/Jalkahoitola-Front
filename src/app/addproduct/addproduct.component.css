@@ -46,3 +46,11 @@ background-color: #78BCF8 ;
   margin-left: 5px;
   margin-top: 50px;
 }
+
+
+.modal-dialog {
+  background-color: #5A5353;
+  
+  width: 600px;
+
+}

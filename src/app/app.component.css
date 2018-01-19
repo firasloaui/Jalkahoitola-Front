@@ -13,6 +13,7 @@
   width: 15em;
   padding: 15px;
   border: 1px solid black;
+  cursor: pointer;
 }
 .productgroups li {
   cursor: pointer;
@@ -41,4 +42,10 @@
   margin-left: 300px;
   margin-right: autoo;
   margin-top: -55px;
+}
+
+.modal-dialog {
+  background-color: #5A5353;
+  margin-top: 250px;
+  width: 500px;
 }
