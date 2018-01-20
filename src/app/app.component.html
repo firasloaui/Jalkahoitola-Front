@@ -19,12 +19,12 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Täytä Kaavake</h4>
+            <h4 class="modal-title">Lisää uusi ryhmä</h4>
           </div>
       
   <form #addForm="ngForm" class="form-horizontal">
     <div>
-      <label class="container" for="name">Ryhmä nimi :</label>
+      <label class="container" for="name">Ryhmän nimi :</label>
       <div class="col-sm-8">
         <input type="text" class="form-control" id="name" required [(ngModel)]="addGroup.name" name="name" #name="ngModel">
       </div>
