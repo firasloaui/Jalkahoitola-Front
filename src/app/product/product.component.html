@@ -10,16 +10,16 @@
   
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
+        <div *ngFor="let item of oneProduct" class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Tuote : {{item.Nmae}}</h4>
         </div>
         <div class="modal-body">
            
             <ul class="product">
                 <li *ngFor="let item of oneProduct">
                    <!--<div> Group ID : {{item.GroupId}}</div>-->
-                   <div> Tuote : {{item.Nmae}}</div>
+                   <!--<div> Tuote : {{item.Nmae}}</div>-->
                     <!--Product ID : {{item.ProductId}}-->
                     <app-received-amount [productId2]="item.ProductId"></app-received-amount>              
                   </li>

@@ -24,6 +24,7 @@ export class AddReceivedAmountComponent implements OnInit {
     this.newShipment.productId = this.productId3;
     this.httpClient.post(this.addShipmentUrl,this.newShipment)
     .subscribe();
+    alert("tuoteryhmä lisätty menestyksekkäästi");
   }
 
   ngOnInit() {

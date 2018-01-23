@@ -30,6 +30,7 @@ export class AddProductComponent implements OnInit{
     this.httpClient.post(this.postAddProductUrl,this.addProduct)
     .subscribe();
     ProductListComponent.call(this.getProductsInGroup(0));
+    alert("tuote lisätty menestyksekkäästi");
    }
   getProductsInGroup(id: any){
     //console.log("getProductsIngroup id:"+id);

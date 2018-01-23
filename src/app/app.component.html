@@ -9,45 +9,48 @@
 
 <table class="productgroups">
   <tr *ngFor="let productGroup of productGroups" [class.selected]="productGroup.GroupId === selectedProductGroup" (click)="onSelect(productGroup.GroupId)">
-    <td>{{productGroup.Name}}</td>
-    <td> <button type="button" class="btn btn-default" (click)="removeProductGroup(productGroup.GroupId)"><i class="fa fa-trash"></i></button></td>
+    <td >{{productGroup.Name}}</td>
+    <td align="center"> <button type="button" class="btn btn-default" (click)="removeProductGroup(productGroup.GroupId)"><i class="fa fa-trash"></i></button></td>
   </tr>
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addGrouptDiv">luo uusi ryhmä</button>
+  <td colspan="2" align="center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#addGrouptDiv">luo uusi ryhmä</button></td>
 </table>
 
 <div id="addGrouptDiv" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Lisää uusi ryhmä</h4>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Lisää uusi ryhmä</h4>
+      </div>
+
+      <form #addForm="ngForm" class="form-horizontal">
+        <div>
+          <label class="container" for="name">Ryhmän nimi :</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="name" required [(ngModel)]="addGroup.name" name="name" #name="ngModel">
           </div>
-      
-  <form #addForm="ngForm" class="form-horizontal">
-    <div>
-      <label class="container" for="name">Ryhmän nimi :</label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" id="name" required [(ngModel)]="addGroup.name" name="name" #name="ngModel">
-      </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <div class="col-sm-2">
+            <button type="reset" class="btn btn-success" [disabled]="!addForm.form.valid" (click)="submitGroupProduct()">Lähetä tiedot </button>
+          </div>
+        </div>
+      </form>
     </div>
 
-
-    <div class="form-group">
-      <div class="col-sm-2">
-        <button type="reset" class="btn btn-success"  [disabled]="!addForm.form.valid" (click)="submitGroupProduct()">Lähetä tiedot </button>
-      </div>
-    </div>
-  </form>
+  </div>
 </div>
-
-</div>
-
 
 <div class="row">
   <div class="span9">
     <app-productlist [groupId]="selectedProductGroup">Loading groups...</app-productlist>
     <div class="row">
       <div class="span6">
-        <app-addproduct [groupId2]="selectedProductGroup"></app-addproduct></div>
+        <app-addproduct [groupId2]="selectedProductGroup"></app-addproduct>
+      </div>
     </div>
   </div>
 </div>
