@@ -23,9 +23,9 @@
         <tbody>
 
           <tr *ngFor="let product of products"
-               [class.selected] = "product.ProductId === selectedProduct"
-               (click)="onProductSelect(product.ProductId)">
-            <th><app-product [productId]="product.ProductId"></app-product>
+               [class.selected] = "product === selectedProduct"
+               (click)="onProductSelect(product)">
+            <th><app-product [productId]="selectedProduct.ProductId"></app-product>
             <!--<th><app-product [productId]="selectedProduct"></app-product></th>-->
             <td>{{product.Nmae}}</td>
             <td>{{product.Description}}</td>
