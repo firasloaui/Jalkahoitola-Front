@@ -39,10 +39,18 @@
 .productgroups thead tr:hover th, .productgroups tbody tr:hover td {
   background-color: #40C50B;  
 }
+
+.productgroups thead tr:hover th, .productgroups tbody tr:hover td:active {
+  Background-color: rgb(80, 248, 14);
+}
+.selected {
+  background-color: rgb(220, 223, 65);
+}
 .span9 {
   margin-left: 300px;
   margin-right: autoo;
   margin-top: -55px;
+  margin-bottom: 200px; /*Tähän voi löytää toisen ratkaisun.*/
 }
 
 .modal-dialog {

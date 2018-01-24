@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
   productGroupRemoveUrl: string = 'http://pointfootapi.azurewebsites.net/api/removeproductgroup/';
   removeProductGroup(id: any) {
-    if (confirm("Are you sure ?")) {
+    if (confirm("Oletko varma että haluat poistaa tuoteryhmän?")) {
       this.httpClient.get(this.productGroupRemoveUrl + id).subscribe();
       setTimeout(() => this.getProductGroup(0), 1000);
     }
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     this.addGroup.id = this.groupId;
     this.httpClient.post(this.productGroupUrl, this.addGroup).subscribe();
     setTimeout(() => this.getProductGroup(0), 1000);
-    alert("tuoteryhmä lisätty menestyksekkäästi");
+    alert("Tuoteryhmä lisätty onnistuneesti");
   }
   onSelect(productGroup: Number): void {
     this.selectedProductGroup = productGroup;

@@ -162,11 +162,11 @@ addrpoduct.component.html <div class="container" > muutettu <div class="Addconta
     color: black;
     background-color: #FFFFFF;
 } 
-*/
+
 #addProductDiv {
   background-color: #FFFFFF;
 }
-
+*/ 
 .addproduct .text {
   position: relative;
   top: -3px;
