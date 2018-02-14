@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
 
     productRemoveUrl: string = 'http://pointfootapi.azurewebsites.net/api/removeproduct/';
     removeProduct() {
-        if (confirm("Are you sure ?")) {
+        if (confirm("Oletko varma ?")) {
             this.httpClient.get(this.productRemoveUrl + this.productId).subscribe();
             console.log("Poistetaan:" + this.productId);
             this.getProduct(this.productId);

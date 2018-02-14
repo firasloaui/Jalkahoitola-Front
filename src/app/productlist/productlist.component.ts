@@ -21,7 +21,7 @@ export class ProductListComponent implements OnChanges {
 
   productRemoveUrl: string = 'http://pointfootapi.azurewebsites.net/api/removeproduct/';
   removeProduct(id: any) {
-    if (confirm("Are you sure ?")) {
+    if (confirm("Oletko varma ?")) {
       this.httpClient.get(this.productRemoveUrl + id).subscribe();
       if (this.groupId != undefined) {
         setTimeout(() => this.getProductsInGroup(this.groupId), 1000);
