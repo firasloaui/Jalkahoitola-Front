@@ -175,13 +175,18 @@ addrpoduct.component.html <div class="container" > muutettu <div class="Addconta
 
 .dropdown {
   position:absolute;
- left: 1150px;
+  left: 1150px;
   top: 80px;
 }
 
 .dropdown-menu{
   margin-right:650px;
-}
+  left: -130px;
+  background-color: rgb(230, 241, 247);
+  border: 5px solid grey;
+  cursor: pointer;
+  outline: none;
+  }
 
 
 
